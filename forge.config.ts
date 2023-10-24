@@ -10,7 +10,7 @@ const config: ForgeConfig = {
     icon: 'images/icon'
   },
   rebuildConfig: {},
-  makers: [new MakerSquirrel({}), new MakerZIP({}, ['darwin']), new MakerRpm({}), new MakerDeb({})],
+  makers: [new MakerSquirrel({name:'db4t', iconUrl: '/images/icon.ico', setupIcon: 'images/icon.ico'}), new MakerZIP({}, ['darwin']), new MakerRpm({}), new MakerDeb({})],
   publishers: [{
     name: '@electron-forge/publisher-github',
     config: {
