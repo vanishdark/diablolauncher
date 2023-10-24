@@ -1,6 +1,6 @@
 # Diablo Launcher
 
-![screeshot](/githubsupportfiles/Screenshot%202023-10-24%20193802.png)
+![screeshot](/githubsupportfiles/ezgif.com-video-to-gif.gif)
 
 - Launch Diablo 4;
 - Check Timer Events;
