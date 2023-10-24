@@ -1,8 +1,8 @@
 {
   "name": "diablo4-launcher",
   "productName": "diablo4-launcher",
-  "version": "1.0.0",
-  "description": "My Electron application description",
+  "version": "1.0.0-beta.1",
+  "description": "Diablo 4 Launcher",
   "main": ".vite/build/main.js",
   "scripts": {
     "start": "electron-forge start",
@@ -12,7 +12,7 @@
     "lint": "eslint --ext .ts,.tsx ."
   },
   "keywords": [],
-  "author": "joaot",
+  "author": "Vanishdark",
   "license": "MIT",
   "devDependencies": {
     "@electron-forge/cli": "^6.4.2",
@@ -22,6 +22,7 @@
     "@electron-forge/maker-zip": "^6.4.2",
     "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
     "@electron-forge/plugin-vite": "^6.4.2",
+    "@electron-forge/publisher-github": "^6.4.2",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "autoprefixer": "^10.4.16",
