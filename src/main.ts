@@ -38,7 +38,7 @@ const createWindow = () => {
   }
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
   ipcMain.on('start-game', (event, name) => {
     const programPath = "D:\\Games\\Diablo IV\\Diablo IV Launcher.exe"
     const program = spawn(programPath,['--exec="launch Fen"'], { detached: true });
