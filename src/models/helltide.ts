@@ -126,7 +126,7 @@ export class HellTide {
                 const now = moment.tz('Europe/London').valueOf();
                 const nextHellTide = this.next;
                 const difference = nextHellTide - now;
-                console.log(difference);
+                // console.log(difference);
                 const duration = moment.duration(difference, 'milliseconds');
                 const hours = duration.hours();
                 const minutes = duration.minutes();

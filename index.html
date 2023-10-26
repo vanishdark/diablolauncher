@@ -1,61 +1,128 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello World!</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="content" class="flex flex-col gap-2 w-full bg-body ">
-      <div class="fog">
-        <div class="fog-container">
-          <div class="fog-img fog-img-first"></div>
-          <div class="fog-img fog-img-second"></div>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello World!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body class="transition-all duration-1000">
+  <div id="content" class="flex flex-col gap-2 w-full bg-body">
+    <div class="fog">
+      <div class="fog-container">
+        <div class="fog-img fog-img-first"></div>
+        <div class="fog-img fog-img-second"></div>
       </div>
-      <div class="flex items-center justify-center z-40">
-        <div id="header" class="flex items-center w-1/2 justify-center mt-10">
-          <div id="headerImage">
-            <img src="/images/bg-001.png" alt="logo" class="object-contain" />
-          </div>
-        </div>
-        <div class="w-1/2 flex flex-col">
-          <div class="grid grid-cols-3 gap-4 mr-4">
-            <div class="bg-gray-800 bg-opacity-80 rounded-xl p-2">
-              <div class="text-red-600 flex flex-col items-center" id="legion">
-                <h3 class="text-2xl">Legion</h3>
-                <span id="legion-countdown" class="text-white"></span>
-                <span id="next-legion" class="text-gray-400"></span>
-              </div>
-            </div>
-            <div class="bg-gray-800 bg-opacity-80 rounded-xl p-2">
-              <div id="helltide" class="text-red-600 flex flex-col items-center">
-                <h3 class="text-2xl">Helltide</h3>
-                <span id="helltide-countdown" class="text-white"></span>
-                <span id="next-helltide" class="text-gray-400"></span>
-              </div>
-            </div>
-            <div class="bg-gray-800 bg-opacity-80 rounded-xl p-2">
-              <div class="text-red-600 flex flex-col items-center" id="worldboss">
-                <h3 class="text-2xl">World Boss</h3>
-                <span id="worldboss-countdown" class="text-white"></span>
-                <span id="next-worldboss" class="text-gray-400"></span>
-              </div>
+      <div class="flex h-full">
+        <!-- Left Side -->
+        <div class="h-full w-1/3">
+          <div id="header" class="flex items-end justify-center h-full">
+            <div id="headerImage">
+              <img src="/images/bg-001.png" alt="logo" class="object-contain" />
             </div>
           </div>
         </div>
-        <div class="absolute bottom-28 right-40">
-          <button id="execDiablo" class="bg-red-800 px-8 py-7 w-80 rounded-xl text-center line-clamp-none text-3xl text-white">Play Diablo</button>
+        <!-- Righ Side -->
+        <div class="flex flex-col h-full w-2/3 ">
+          <div class="h-1/5 ">
+            <nav id="navigation" class="w-full h-full flex items-center justify-center gap-10">
+              <a role="button" id="timersMenu" href="#timers"
+                class="text-lg text-white z-10 transition-all duration-300">Timers</a>
+              <a role="button" id="farmMenu" href="#farm"
+                class="text-lg text-white z-10 transition-all duration-300">Farm</a>
+            </nav>
+          </div>
+          <div class="h-3/5 w-full overflow-hidden">
+            <div class="content">
+              <div id="timers" class="my-auto px-20 z-40">
+                <div class="grid grid-cols-3 gap-4">
+                  <div class="bg-gray-800 bg-opacity-80 rounded-xl p-2">
+                    <div class="text-red-600 flex flex-col items-center" id="legion">
+                      <h3 class="text-2xl">Legion</h3>
+                      <span id="legion-countdown" class="text-white"></span>
+                      <span id="next-legion" class="text-gray-400"></span>
+                    </div>
+                  </div>
+                  <div class="bg-gray-800 bg-opacity-80 rounded-xl p-2">
+                    <div id="helltide" class="text-red-600 flex flex-col items-center">
+                      <h3 class="text-2xl">Helltide</h3>
+                      <span id="helltide-countdown" class="text-white"></span>
+                      <span id="next-helltide" class="text-gray-400"></span>
+                    </div>
+                  </div>
+                  <div class="bg-gray-800 bg-opacity-80 rounded-xl p-2">
+                    <div class="text-red-600 flex flex-col items-center" id="worldboss">
+                      <h3 class="text-2xl">World Boss</h3>
+                      <span id="worldboss-countdown" class="text-white"></span>
+                      <span id="next-worldboss" class="text-gray-400"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="farm" class="my-auto px-20 z-40">
+                <div class="grid gird-rows-3 grid-cols-2 gap-4 items-stretch">
+                  <div id="grigoire" class="flex flex-col bg-gray-800 bg-opacity-80 text-white rounded-md px-4 py-2">
+                    <span class="text-2xl text-red-600">Grigoire, The Galvanic Saint</span>
+                    <div>
+                      <span class="text-red-400 mr-4">Farm Location:</span><span>Helltides</span>
+                    </div>
+                    <div>
+                      <span class=" text-red-400 mr-4">Ammount:</span>5 Living Steel
+                    </div>
+                  </div>
+                  <div id="varshan" class="flex flex-col bg-gray-800 bg-opacity-80 text-white rounded-md px-4 py-2">
+                    <span class="text-2xl text-red-600">Echo of Varshan</span>
+                    <div>
+                      <span class="text-red-400 mr-4">Farm Location:</span><span>Tree of Whispers</span>
+                    </div>
+                    <div>
+                      <span class=" text-red-400 mr-4">Ammount:</span>? body parts
+                    </div>
+                  </div>
+                  <div id="ice" class="flex flex-col bg-gray-800 bg-opacity-80 text-white rounded-md px-4 py-2">
+                    <span class="text-2xl text-red-600">The Beast in the Ice</span>
+                    <div>
+                      <span class="text-red-400 mr-4">Farm Location:</span><span>Nighmare Dugeons 30+</span>
+                    </div>
+                    <div>
+                      <span class=" text-red-400 mr-4">Ammount:</span>9 tears and 220 Sigil Powder
+                    </div>
+                  </div>
+                  <div id="master" class="flex flex-col bg-gray-800 bg-opacity-80 text-white rounded-md px-4 py-2">
+                    <span class="text-2xl text-red-600">Dark Master</span>
+                    <div>
+                      <span class="text-red-400 mr-4">Farm Location:</span><span>World boss or Legion</span>
+                    </div>
+                    <div>
+                      <span class=" text-red-400 mr-4">Ammount:</span>9 Exquisite Blood
+                    </div>
+                  </div>
+                  <div id="duriel" class="flex flex-col bg-gray-800 bg-opacity-80 text-white rounded-md px-4 py-2">
+                    <span class="text-2xl text-red-600">Echo of Duriel</span>
+                    <div>
+                      <span class="text-red-400 mr-4">Farm Location:</span><span>Grigoire, Galvanic and Varshan</span>
+                    </div>
+                    <div>
+                      <span class=" text-red-400 mr-4">Ammount:</span>2 Mucus-Slick Eggs and 2 Shards of Agony
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="h-1/5 w-full flex items-center justify-end pr-20 pb-10">
+            <button id="execDiablo"
+              class="bg-red-800 bg-opacity-50 hover:bg-opacity-90 px-8 py-7 w-80 rounded text-center line-clamp-none text-3xl text-white z-10">Play
+              Diablo</button>
+          </div>
         </div>
-      </div>
-      <div id="debbug" class="flex flex-col gap-y-4 hidden">
-        <div id="debbug-helltide"></div>
-        <div id="debbug-legion" class="flex flex-col"></div>
-        <div id="debbug-worldboss"></div>
       </div>
     </div>
+
     <script type="module" src="/src/renderer.ts"></script>
-  </body>
+</body>
+
 </html>

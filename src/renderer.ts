@@ -28,7 +28,8 @@
 import {sendMessage} from './preload';
 
 import './index.css';
-import './loadTimers.ts';
+import './load.ts';
+
 let gameRunning = false;
 document.getElementById('execDiablo').addEventListener('click', () => {
     setTimeout(() => {
@@ -39,4 +40,4 @@ document.getElementById('execDiablo').addEventListener('click', () => {
     // @ts-ignore
     window.sendMessage('start-game');
 });
-console.log('👋 This message is being logged by "renderer.ts", included via Vite');
+// console.log('👋 This message is being logged by "renderer.ts", included via Vite');

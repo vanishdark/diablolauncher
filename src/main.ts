@@ -1,6 +1,11 @@
 import { app, BrowserWindow, ipcMain, shell } from 'electron';
 import path from 'path';
 import { spawn } from 'child_process';
+import {updateElectronApp} from 'update-electron-app';
+
+
+// Auto Update the app
+updateElectronApp()
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
@@ -15,6 +20,8 @@ const createWindow = () => {
       color: '#1F293700',
       symbolColor: '#fff',
     },
+    maximizable: false,
+    resizable: false,
     width: 1280,
     height: 720,
     webPreferences: {
@@ -31,7 +38,7 @@ const createWindow = () => {
   }
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
   ipcMain.on('start-game', (event, name) => {
     const programPath = "D:\\Games\\Diablo IV\\Diablo IV Launcher.exe"
     const program = spawn(programPath,['--exec="launch Fen"'], { detached: true });

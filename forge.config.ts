@@ -19,7 +19,7 @@ const config: ForgeConfig = {
         name: 'diablolauncher'
       },
       authToken: "",
-      prerelease: true
+      prerelease: false
     }
   }],
   plugins: [
