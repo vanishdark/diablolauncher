@@ -19,6 +19,7 @@ const config: ForgeConfig = {
         name: 'diablolauncher'
       },
       authToken: "",
+      draft: false,
       prerelease: false
     }
   }],
